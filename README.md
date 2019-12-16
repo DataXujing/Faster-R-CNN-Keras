@@ -1,5 +1,7 @@
 ## 基于Faster R-CNN的安全帽目标检测
 
+**Xu Jing**
+
 ### 0. :bug: 关于数据
 
 + 请参考<https://github.com/DataXujing/YOLO-V3-Tensorflow>
@@ -122,6 +124,7 @@ run_train.bat
 ```
 
 ![](./static/train_0.png)
+
 
 ### 3. :rocket: 模型推断
 
