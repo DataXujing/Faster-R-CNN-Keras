@@ -13,17 +13,17 @@
 数据的标注仍然采用VOC格式的数据标注形式，如果是其他的标注形式比如COCO请自行实现相关代码。将数据最终转化为如下形式：
 
 ```
- #  单行数据的结构： (path_filename, x1, y1, x2, y2, class_name)
-            # Note:
-            #   一个path_filename 可能对应多个类别(class_name)，每个类别占用一行数据
-            #   x1, y1, x2, y2 是原图像的坐标, 而不是
-            #   (x1, y1) 标注框的左上坐标; (x2, y2) 标注框的右下坐标
-            #   x1,y1-------------------
-            #   |                       |
-            #   |                       |
-            #   |                       |
-            #   |                       |
-            #   ---------------------x2,y2
+    #  单行数据的结构： (path_filename, x1, y1, x2, y2, class_name)
+    # Note:
+    #   一个path_filename 可能对应多个类别(class_name)，每个类别占用一行数据
+    #   x1, y1, x2, y2 是原图像的坐标, 而不是ratio后图像上的坐标
+    #   (x1, y1) 标注框的左上坐标; (x2, y2) 标注框的右下坐标
+    #   x1,y1-------------------
+    #   |                       |
+    #   |                       |
+    #   |                       |
+    #   |                       |
+    #   ---------------------x2,y2
 ```
 
 可以运行如下代码实现数据集的准备工作:
@@ -158,6 +158,13 @@ test_video.bat
 
 ### 4. :tada: DEMO
 
+![](./results_test/0.png)
+
+![](./results_test/1.png)
+
+![](./results_test/2.png)
+
+
 
 ###  :white_check_mark: Reference
 
@@ -165,7 +172,7 @@ test_video.bat
 
 [2] [Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning, 2016](https://arxiv.org/pdf/1602.07261.pdf) 
 
-[3] [https://github.com/yhenon/keras-frcnn/](https://github.com/yhenon/keras-frcnn/)
+[3] [https://github.com/you359/Keras-FasterRCNN](https://github.com/you359/Keras-FasterRCNN)
 
 [4] [Keras Pretrained Model Zoo](https://github.com/fchollet/deep-learning-models)
 
